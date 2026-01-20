@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RentLinked | Premium LinkedIn Account Rentals</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Outfit', sans-serif;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .text-gradient {
+            background: linear-gradient(to right, #60a5fa, #3b82f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gold-gradient {
+            background: linear-gradient(to right, #fbbf24, #d97706);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .glow-effect {
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.15);
+        }
+        .glow-effect:hover {
+            box-shadow: 0 0 30px rgba(59, 130, 246, 0.3);
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .floating {
+            animation: float 4s ease-in-out infinite;
+        }
+        
+        /* Marquee Animation */
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(calc(-250px * 7)); }
+        }
+        .slider {
+            height: 100px;
+            margin: auto;
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+        }
+        .slider::before, .slider::after {
+            background: linear-gradient(to right, rgb(2, 6, 23) 0%, rgba(255, 255, 255, 0) 100%);
+            content: "";
+            height: 100px;
+            position: absolute;
+            width: 200px;
+            z-index: 2;
+        }
+        .slider::after {
+            right: 0;
+            top: 0;
+            transform: rotateZ(180deg);
+        }
+        .slider::before {
+            left: 0;
+            top: 0;
+        }
+        .slide-track {
+            animation: scroll 40s linear infinite;
+            display: flex;
+            width: calc(250px * 14);
+        }
+        .slide {
+            height: 100px;
+            width: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Scroll Reveal Animation */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 antialiased selection:bg-blue-500 selection:text-white">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-card border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex items-center">
+                    <a href="#" class="flex items-center space-x-2">
+                        <i class="fa-brands fa-linkedin text-4xl text-blue-500"></i>
+                        <span class="text-2xl font-bold tracking-wide">Rent<span class="text-blue-500">Linked</span></span>
+                    </a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#home" class="hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
+                        <a href="#office" class="hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">About Us</a>
+                        <a href="#features" class="hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">Features</a>
+                        <a href="#pricing" class="hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">Pricing</a>
+                        <a href="#partners" class="text-green-400 bg-green-500/10 border border-green-500/20 hover:bg-green-500/20 hover:border-green-500/40 px-4 py-2 rounded-full text-sm font-bold transition-all shadow-[0_0_15px_-3px_rgba(74,222,128,0.2)]"><i class="fa-solid fa-money-bill-wave mr-2"></i>Affiliate Program</a>
+                        <a href="#faq" class="hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">FAQ</a>
+                    </div>
+                </div>
+                <div>
+                    <a href="https://t.me/herewedo12" target="_blank" class="bg-blue-600 hover:bg-blue-500 text-white px-6 py-2.5 rounded-full font-medium transition-all shadow-lg shadow-blue-500/20 flex items-center gap-2">
+                        <i class="fa-brands fa-telegram"></i> Support
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+        <!-- Background Elements -->
+        <div class="absolute top-0 left-1/2 w-full -translate-x-1/2 h-full z-0 pointer-events-none">
+            <div class="absolute top-20 left-10 w-72 h-72 bg-blue-600/20 rounded-full blur-[100px]"></div>
+            <div class="absolute bottom-20 right-10 w-96 h-96 bg-purple-600/10 rounded-full blur-[100px]"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <div class="inline-block mb-4 px-4 py-1.5 rounded-full glass-card border border-blue-500/30 text-blue-400 text-sm font-semibold tracking-wide uppercase">
+                🚀 #1 Trusted LinkedIn Rental Service
+            </div>
+            <h1 class="text-5xl md:text-7xl font-bold tracking-tight mb-6 leading-tight">
+                Scale Your Outreach with <br>
+                <span class="text-gradient">Premium LinkedIn Accounts</span>
+            </h1>
+            <p class="mt-4 max-w-2xl mx-auto text-xl text-slate-400 mb-10">
+                Instant access to verified, aged, and premium LinkedIn accounts. Bypass limits and grow your network safely.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="https://t.me/Rentlinkedin12" target="_blank" class="group bg-white text-slate-900 px-8 py-4 rounded-full font-bold text-lg transition-all hover:bg-blue-50 hover:scale-105 flex items-center justify-center gap-2 shadow-[0_0_40px_-10px_rgba(255,255,255,0.3)]">
+                    <i class="fa-brands fa-telegram text-blue-500 text-xl group-hover:rotate-12 transition-transform"></i>
+                    Join Rental Group
+                </a>
+                <a href="https://t.me/herewedo12" target="_blank" class="glass-card text-white px-8 py-4 rounded-full font-bold text-lg transition-all hover:bg-white/10 hover:border-white/20 flex items-center justify-center gap-2">
+                    Contact Support <i class="fa-solid fa-arrow-right text-sm"></i>
+                </a>
+            </div>
+            
+            <!-- Trust Indicators -->
+            <div class="mt-16 pt-8 border-t border-white/5 grid grid-cols-2 gap-8 md:grid-cols-4 items-center opacity-70">
+                <div class="flex flex-col items-center">
+                    <span class="text-3xl font-bold text-white">500+</span>
+                    <span class="text-sm text-slate-400">Happy Clients</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <span class="text-3xl font-bold text-white">100%</span>
+                    <span class="text-sm text-slate-400">Verified Accounts</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <span class="text-3xl font-bold text-white">24/7</span>
+                    <span class="text-sm text-slate-400">Active Support</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <span class="text-3xl font-bold text-white">Instant</span>
+                    <span class="text-sm text-slate-400">Delivery</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Brands Marquee -->
+        <div class="mt-20 border-t border-white/5 bg-black/20 backdrop-blur-sm py-10">
+            <p class="text-center text-slate-500 text-sm font-semibold uppercase tracking-widest mb-8">Trusted by professionals from companies like</p>
+            <div class="slider">
+                <div class="slide-track">
+                    <!-- 7 Unique Brands (Duplicated for seamless loop) -->
+                    <div class="slide">
+                        <div class="text-2xl font-bold text-slate-400 flex items-center gap-2"><i class="fa-brands fa-google"></i> GOOGLE</div>
+                    </div>
+                    <div class="slide">
+                        <div class="text-2xl font-bold text-slate-400 flex items-center gap-2"><i class="fa-brands fa-amazon"></i> AMAZON</div>
+                    </div>
+                    <div class="slide">
+                        <div class="text-2xl font-bold text-slate-400 flex items-center gap-2"><i class="fa-brands fa-microsoft"></i> MICROSOFT</div>
+                    </div>
+                    <div class="slide">
+                        <div class="text-2xl font-bold text-slate-400 flex items-center gap-2"><i class="fa-brands fa-stripe"></i> STRIPE</div>
+                    </div>
+                    <div class="slide">
+                        <div class="text-2xl font-bold text-slate-400 flex items-center gap-2"><i class="fa-brands fa-airbnb"></i> AIRBNB</div>
+                    </div>
+                    <div class="slide">
+                        <div class="text-2xl font-bold text-slate-400 flex items-center gap-2"><i class="fa-brands fa-meta"></i> META</div>
+                    </div>
+                    <div class="slide">
+                        <div class="text-2xl font-bold text-slate-400 flex items-center gap-2"><i class="fa-brands fa-shopify"></i> SHOPIFY</div>
+                    </div>
+
+                    <!-- Duplicate for loop -->
+                    <div class="slide">
+                        <div class="text-2xl font-bold text-slate-400 flex items-center gap-2"><i class="fa-brands fa-google"></i> GOOGLE</div>
+                    </div>
+                    <div class="slide">
+                        <div class="text-2xl font-bold text-slate-400 flex items-center gap-2"><i class="fa-brands fa-amazon"></i> AMAZON</div>
+                    </div>
+                    <div class="slide">
+                        <div class="text-2xl font-bold text-slate-400 flex items-center gap-2"><i class="fa-brands fa-microsoft"></i> MICROSOFT</div>
+                    </div>
+                    <div class="slide">
+                        <div class="text-2xl font-bold text-slate-400 flex items-center gap-2"><i class="fa-brands fa-stripe"></i> STRIPE</div>
+                    </div>
+                    <div class="slide">
+                        <div class="text-2xl font-bold text-slate-400 flex items-center gap-2"><i class="fa-brands fa-airbnb"></i> AIRBNB</div>
+                    </div>
+                    <div class="slide">
+                        <div class="text-2xl font-bold text-slate-400 flex items-center gap-2"><i class="fa-brands fa-meta"></i> META</div>
+                    </div>
+                    <div class="slide">
+                        <div class="text-2xl font-bold text-slate-400 flex items-center gap-2"><i class="fa-brands fa-shopify"></i> SHOPIFY</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Strategic Partners & Promotion -->
+    <section class="py-16 bg-gradient-to-r from-blue-900/20 to-purple-900/20 border-y border-white/5 relative overflow-hidden">
+        <div class="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-8 reveal">
+                <div class="md:w-1/2">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400 text-xs font-bold uppercase tracking-wider mb-4">
+                        <i class="fa-solid fa-crown"></i> Exclusive Partners
+                    </div>
+                    <h2 class="text-3xl font-bold mb-4">Powering Growth for Industry Leaders</h2>
+                    <p class="text-slate-400 mb-6">We are proud to be the preferred account provider for top-tier marketing teams at global giants. Special promotional rates available for employees.</p>
+                    <div class="flex items-center gap-6">
+                        <div class="glass-card px-6 py-3 rounded-xl flex items-center gap-3 border border-white/10 hover:border-white/30 transition-all cursor-pointer group">
+                            <i class="fa-brands fa-apple text-3xl text-white group-hover:scale-110 transition-transform"></i>
+                            <span class="font-bold text-lg">Apple</span>
+                        </div>
+                        <div class="glass-card px-6 py-3 rounded-xl flex items-center gap-3 border border-white/10 hover:border-white/30 transition-all cursor-pointer group">
+                            <i class="fa-brands fa-amazon text-3xl text-white group-hover:scale-110 transition-transform"></i>
+                            <span class="font-bold text-lg">Amazon</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2 relative">
+                    <div class="absolute -inset-4 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl blur-xl opacity-30 animate-pulse"></div>
+                    <div class="glass-card p-6 rounded-2xl border border-white/10 relative">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="font-bold text-lg">Enterprise Deal</h3>
+                            <span class="text-green-400 text-sm font-mono flex items-center gap-1"><i class="fa-solid fa-circle text-[10px]"></i> Active</span>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="flex items-center gap-3 p-3 rounded-lg bg-white/5">
+                                <div class="w-10 h-10 rounded-full bg-slate-700 flex items-center justify-center"><i class="fa-brands fa-apple text-xl"></i></div>
+                                <div>
+                                    <div class="text-sm font-bold">Apple Inc. Marketing</div>
+                                    <div class="text-xs text-slate-400">Restocked 50+ Sales Nav Accounts</div>
+                                </div>
+                                <div class="ml-auto text-sm font-mono text-blue-400">Just now</div>
+                            </div>
+                            <div class="flex items-center gap-3 p-3 rounded-lg bg-white/5">
+                                <div class="w-10 h-10 rounded-full bg-slate-700 flex items-center justify-center"><i class="fa-brands fa-amazon text-xl"></i></div>
+                                <div>
+                                    <div class="text-sm font-bold">Amazon Seller Team</div>
+                                    <div class="text-xs text-slate-400">Extended Rental Contract</div>
+                                </div>
+                                <div class="ml-auto text-sm font-mono text-blue-400">2m ago</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Office & Team Section -->
+    <section id="office" class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-3xl md:text-5xl font-bold mb-4">Global Operations Center</h2>
+                <p class="text-slate-400 max-w-2xl mx-auto">Operating from state-of-the-art facilities to ensure 24/7 uptime and support for your business needs.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-4 h-[600px] reveal">
+                <!-- Main Office Image -->
+                <div class="md:col-span-2 md:row-span-2 relative group overflow-hidden rounded-2xl">
+                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80" alt="Modern Office" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent opacity-80"></div>
+                    <div class="absolute bottom-6 left-6">
+                        <span class="bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded mb-2 inline-block">HQ</span>
+                        <h3 class="text-2xl font-bold text-white">Silicon Valley Hub</h3>
+                        <p class="text-slate-300 text-sm">Where our support team operates 24/7.</p>
+                    </div>
+                </div>
+
+                <!-- Team Meeting -->
+                <div class="md:col-span-1 md:row-span-1 relative group overflow-hidden rounded-2xl">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80" alt="Team Meeting" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-slate-900/40 group-hover:bg-slate-900/20 transition-colors"></div>
+                    <div class="absolute bottom-4 left-4">
+                        <h3 class="font-bold text-white">Expert Team</h3>
+                    </div>
+                </div>
+
+                <!-- Deal Signing -->
+                <div class="md:col-span-1 md:row-span-1 relative group overflow-hidden rounded-2xl">
+                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&q=80" alt="Deal Signing" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                     <div class="absolute inset-0 bg-slate-900/40 group-hover:bg-slate-900/20 transition-colors"></div>
+                    <div class="absolute bottom-4 left-4">
+                        <h3 class="font-bold text-white">Enterprise Deals</h3>
+                    </div>
+                </div>
+
+                <!-- Server Room/Tech -->
+                <div class="md:col-span-2 md:row-span-1 relative group overflow-hidden rounded-2xl">
+                    <img src="https://images.unsplash.com/photo-1558494949-ef526b0042a0?auto=format&fit=crop&w=1200&q=80" alt="Server Infrastructure" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-r from-slate-900/80 to-transparent"></div>
+                    <div class="absolute bottom-6 left-6 max-w-xs">
+                        <div class="flex items-center gap-2 mb-2">
+                            <div class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
+                            <span class="text-green-400 text-xs font-bold uppercase">Systems Operational</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">Bank-Grade Security</h3>
+                        <p class="text-slate-300 text-sm">We use dedicated residential proxies for every account.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Trust Stats -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-8 reveal">
+                <div class="glass-card p-6 rounded-xl text-center border border-white/5">
+                    <div class="text-3xl font-bold text-blue-400 mb-1">50+</div>
+                    <div class="text-sm text-slate-400">Fortune 500 Clients</div>
+                </div>
+                <div class="glass-card p-6 rounded-xl text-center border border-white/5">
+                    <div class="text-3xl font-bold text-blue-400 mb-1">12</div>
+                    <div class="text-sm text-slate-400">Global Locations</div>
+                </div>
+                 <div class="glass-card p-6 rounded-xl text-center border border-white/5">
+                    <div class="text-3xl font-bold text-blue-400 mb-1">24h</div>
+                    <div class="text-sm text-slate-400">Avg. Turnaround</div>
+                </div>
+                 <div class="glass-card p-6 rounded-xl text-center border border-white/5">
+                    <div class="text-3xl font-bold text-blue-400 mb-1">99%</div>
+                    <div class="text-sm text-slate-400">Retention Rate</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 bg-slate-900/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Why Rent With Us?</h2>
+                <p class="text-slate-400 max-w-2xl mx-auto">We provide high-quality accounts that help you achieve your business goals without the risk of bans.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="glass-card p-8 rounded-2xl hover:bg-white/5 transition-all duration-300 group reveal">
+                    <div class="w-14 h-14 bg-blue-500/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-blue-500/20 transition-colors">
+                        <i class="fa-solid fa-shield-halved text-2xl text-blue-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Safe & Secure</h3>
+                    <p class="text-slate-400 leading-relaxed">Our accounts are phone verified and warmed up to ensure maximum longevity and safety for your campaigns.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="glass-card p-8 rounded-2xl hover:bg-white/5 transition-all duration-300 group reveal" style="transition-delay: 100ms;">
+                    <div class="w-14 h-14 bg-purple-500/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-purple-500/20 transition-colors">
+                        <i class="fa-solid fa-bolt text-2xl text-purple-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Instant Access</h3>
+                    <p class="text-slate-400 leading-relaxed">Get your credentials immediately after payment via our Telegram support. No waiting times.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="glass-card p-8 rounded-2xl hover:bg-white/5 transition-all duration-300 group reveal" style="transition-delay: 200ms;">
+                    <div class="w-14 h-14 bg-amber-500/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-amber-500/20 transition-colors">
+                        <i class="fa-solid fa-headset text-2xl text-amber-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Premium Support</h3>
+                    <p class="text-slate-400 leading-relaxed">Direct support line via Telegram @herewedo12. We help you troubleshoot any issues instantly.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advanced Specs Section -->
+    <section class="py-16 bg-black/40 border-y border-white/5 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="reveal">
+                    <h3 class="text-blue-500 font-bold tracking-wider uppercase mb-2">Technical Superiority</h3>
+                    <h2 class="text-3xl font-bold mb-6">Enterprise-Grade Account Security</h2>
+                    <div class="space-y-6">
+                        <div class="flex gap-4">
+                            <div class="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-fingerprint text-blue-400 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg">Anti-Detect Fingerprinting</h4>
+                                <p class="text-slate-400 text-sm">Every account comes with a unique browser fingerprint profile to completely eliminate linkage risks.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-globe text-purple-400 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg">Static Residential IPs</h4>
+                                <p class="text-slate-400 text-sm">We use premium ISP proxies (AT&T, Verizon, Comcast) not datacenter IPs, making your login look 100% organic.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-cookie-bite text-amber-400 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg">JSON Cookie Export</h4>
+                                <p class="text-slate-400 text-sm">Import accounts instantly into tools like GoLogin, Incogniton, or Multilogin via cookie format.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative reveal">
+                    <div class="absolute inset-0 bg-blue-500/20 blur-[80px] rounded-full"></div>
+                    <div class="glass-card p-6 rounded-2xl border border-white/10 relative">
+                        <div class="flex items-center justify-between border-b border-white/5 pb-4 mb-4">
+                            <div class="flex items-center gap-2">
+                                <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                                <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                                <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                            </div>
+                            <div class="text-xs font-mono text-slate-500">terminal@rentlinked:~/security</div>
+                        </div>
+                        <div class="font-mono text-xs space-y-2">
+                            <div class="text-green-400">$ initializing_security_protocol...</div>
+                            <div class="text-slate-300">> residential_proxy: <span class="text-blue-400">CONNECTED (192.168.x.x)</span></div>
+                            <div class="text-slate-300">> browser_fingerprint: <span class="text-purple-400">SPOOFED (Chrome 120, Win11)</span></div>
+                            <div class="text-slate-300">> webrtc_leak_protection: <span class="text-green-400">ACTIVE</span></div>
+                            <div class="text-slate-300">> cookie_health: <span class="text-green-400">100%</span></div>
+                            <div class="text-slate-300">> account_status: <span class="text-green-400">VERIFIED_PREMIUM</span></div>
+                            <div class="animate-pulse text-blue-400 mt-4">$ ready_for_login_</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community & Flash Sales -->
+    <section class="py-16 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-r from-blue-900 to-indigo-900 opacity-20"></div>
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center reveal">
+            <span class="inline-block px-4 py-1 rounded-full bg-red-500/20 text-red-400 border border-red-500/30 text-xs font-bold uppercase tracking-widest mb-4 animate-pulse">🔴 Live Inventory Updates</span>
+            <h2 class="text-3xl md:text-5xl font-bold mb-6">Don't Miss Daily <span class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-500">Free Drops</span></h2>
+            <p class="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">We drop <strong>free premium accounts</strong> and exclusive 50% discount codes every day in our Telegram channel. Join 5,000+ members now!</p>
+            
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <a href="https://t.me/Rentlinkedin12" target="_blank" class="bg-white text-blue-900 px-8 py-4 rounded-full font-bold text-lg hover:bg-blue-50 transition-all flex items-center justify-center gap-2 shadow-[0_0_30px_rgba(255,255,255,0.3)] hover:scale-105">
+                    <i class="fa-brands fa-telegram text-2xl"></i> Join Main Channel
+                </a>
+                <a href="https://t.me/linkedin_rental_12" target="_blank" class="bg-gradient-to-r from-amber-500 to-orange-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:from-amber-400 hover:to-orange-500 transition-all flex items-center justify-center gap-2 shadow-[0_0_30px_rgba(245,158,11,0.3)] hover:scale-105">
+                    <i class="fa-solid fa-fire text-2xl"></i> Join Offers Channel
+                </a>
+            </div>
+
+            <div class="mt-8 flex items-center justify-center gap-2 text-sm text-slate-400">
+                <div class="flex -space-x-2">
+                    <img class="w-8 h-8 rounded-full border-2 border-slate-900" src="https://i.pravatar.cc/100?img=1" alt="User">
+                    <img class="w-8 h-8 rounded-full border-2 border-slate-900" src="https://i.pravatar.cc/100?img=2" alt="User">
+                    <img class="w-8 h-8 rounded-full border-2 border-slate-900" src="https://i.pravatar.cc/100?img=3" alt="User">
+                    <img class="w-8 h-8 rounded-full border-2 border-slate-900" src="https://i.pravatar.cc/100?img=4" alt="User">
+                </div>
+                <p><span class="text-green-400 font-bold">124 people</span> joined in the last hour</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-3xl md:text-5xl font-bold mb-4">Choose Your Plan</h2>
+                <p class="text-slate-400">Flexible rental options tailored to your needs.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Basic Plan -->
+                <div class="glass-card p-8 rounded-3xl border border-white/5 hover:border-blue-500/30 transition-all flex flex-col relative overflow-hidden reveal">
+                    <div class="mb-6">
+                        <h3 class="text-lg font-medium text-slate-300">Fresh Account</h3>
+                        <div class="mt-4 flex items-baseline">
+                            <span class="text-4xl font-bold text-white">$15</span>
+                            <span class="text-slate-500 ml-2">/month</span>
+                        </div>
+                    </div>
+                    <ul class="space-y-4 mb-8 flex-1">
+                        <li class="flex items-center text-slate-300"><i class="fa-solid fa-check text-green-400 mr-3"></i> Phone Verified</li>
+                        <li class="flex items-center text-slate-300"><i class="fa-solid fa-check text-green-400 mr-3"></i> Profile Complete</li>
+                        <li class="flex items-center text-slate-300"><i class="fa-solid fa-check text-green-400 mr-3"></i> 0-50 Connections</li>
+                        <li class="flex items-center text-slate-300"><i class="fa-solid fa-check text-green-400 mr-3"></i> Replacement Warranty</li>
+                    </ul>
+                    <a href="https://t.me/herewedo12" target="_blank" class="w-full block text-center py-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 transition-colors font-medium">Rent Now</a>
+                </div>
+
+                <!-- Pro Plan (Popular) -->
+                <div class="relative group md:-translate-y-4 reveal" style="transition-delay: 100ms;">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-3xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+                    <div class="glass-card p-8 rounded-3xl border border-blue-500/50 bg-slate-900/80 transition-all flex flex-col relative h-full shadow-2xl shadow-blue-900/20">
+                        <div class="absolute top-0 right-0 bg-gradient-to-l from-blue-600 to-cyan-500 text-white text-xs font-bold px-3 py-1 rounded-bl-xl shadow-lg">POPULAR</div>
+                    <div class="mb-6">
+                        <h3 class="text-lg font-medium text-blue-300">Aged Account</h3>
+                        <div class="mt-4 flex items-baseline">
+                            <span class="text-5xl font-bold text-white">$35</span>
+                            <span class="text-slate-500 ml-2">/month</span>
+                        </div>
+                    </div>
+                    <ul class="space-y-4 mb-8 flex-1">
+                        <li class="flex items-center text-white"><i class="fa-solid fa-check text-blue-400 mr-3"></i> 1+ Year Old</li>
+                        <li class="flex items-center text-white"><i class="fa-solid fa-check text-blue-400 mr-3"></i> 500+ Connections</li>
+                        <li class="flex items-center text-white"><i class="fa-solid fa-check text-blue-400 mr-3"></i> Real Activity History</li>
+                        <li class="flex items-center text-white"><i class="fa-solid fa-check text-blue-400 mr-3"></i> Higher Daily Limits</li>
+                        <li class="flex items-center text-white"><i class="fa-solid fa-check text-blue-400 mr-3"></i> Priority Support</li>
+                    </ul>
+                    <a href="https://t.me/herewedo12" target="_blank" class="w-full block text-center py-4 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold glow-effect transition-all">Rent Now</a>
+                </div>
+                </div>
+
+                <!-- Premium Plan -->
+                <div class="glass-card p-8 rounded-3xl border border-amber-500/20 hover:border-amber-500/40 transition-all flex flex-col relative overflow-hidden reveal" style="transition-delay: 200ms;">
+                     <div class="mb-6">
+                        <h3 class="text-lg font-medium text-amber-200">Sales Navigator</h3>
+                        <div class="mt-4 flex items-baseline">
+                            <span class="text-4xl font-bold text-white">$85</span>
+                            <span class="text-slate-500 ml-2">/month</span>
+                        </div>
+                    </div>
+                    <ul class="space-y-4 mb-8 flex-1">
+                        <li class="flex items-center text-slate-300"><i class="fa-solid fa-check text-amber-400 mr-3"></i> Sales Nav Enabled</li>
+                        <li class="flex items-center text-slate-300"><i class="fa-solid fa-check text-amber-400 mr-3"></i> Unlimited Search</li>
+                        <li class="flex items-center text-slate-300"><i class="fa-solid fa-check text-amber-400 mr-3"></i> InMail Credits</li>
+                        <li class="flex items-center text-slate-300"><i class="fa-solid fa-check text-amber-400 mr-3"></i> Advanced Filters</li>
+                    </ul>
+                    <a href="https://t.me/herewedo12" target="_blank" class="w-full block text-center py-3 rounded-xl bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-500 hover:to-orange-500 text-white font-medium transition-all">Rent Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-24 bg-gradient-to-b from-slate-900 to-slate-950 border-t border-white/5 relative overflow-hidden">
+        <!-- Decoration -->
+        <div class="absolute top-0 right-0 w-96 h-96 bg-blue-600/5 rounded-full blur-[100px] pointer-events-none"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-3xl md:text-5xl font-bold mb-4">What Our Clients Say</h2>
+                <p class="text-slate-400">Join hundreds of satisfied professionals growing their network.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Review 1 -->
+                <div class="glass-card p-8 rounded-2xl hover:bg-white/5 transition-all duration-300 reveal">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center text-white font-bold text-lg shadow-lg">JD</div>
+                        <div class="ml-4">
+                            <h4 class="font-bold text-white">James D.</h4>
+                            <p class="text-xs text-blue-400">Marketing Agency Owner</p>
+                        </div>
+                        <div class="ml-auto flex text-yellow-400 text-xs">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-slate-300 leading-relaxed italic">"The aged accounts from RentLinked are a game changer. Immediate access and they actually stick. My outreach campaigns have never been smoother."</p>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="glass-card p-8 rounded-2xl hover:bg-white/5 transition-all duration-300 reveal" style="transition-delay: 100ms;">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 rounded-full bg-gradient-to-br from-purple-400 to-purple-600 flex items-center justify-center text-white font-bold text-lg shadow-lg">SM</div>
+                        <div class="ml-4">
+                            <h4 class="font-bold text-white">Sarah M.</h4>
+                            <p class="text-xs text-purple-400">Recruiter</p>
+                        </div>
+                        <div class="ml-auto flex text-yellow-400 text-xs">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-slate-300 leading-relaxed italic">"Support via Telegram is incredibly fast. I had a question about limits and @herewedo12 replied in seconds. Top notch service."</p>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="glass-card p-8 rounded-2xl hover:bg-white/5 transition-all duration-300 reveal" style="transition-delay: 200ms;">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 rounded-full bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center text-white font-bold text-lg shadow-lg">RK</div>
+                        <div class="ml-4">
+                            <h4 class="font-bold text-white">Robert K.</h4>
+                            <p class="text-xs text-amber-400">Sales Director</p>
+                        </div>
+                        <div class="ml-auto flex text-yellow-400 text-xs">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-slate-300 leading-relaxed italic">"Sales Navigator account works perfectly. Saved me so much money compared to buying directly. Highly recommend for any sales team."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="py-20 bg-slate-900/30 border-y border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-3xl md:text-4xl font-bold">How It Works</h2>
+            </div>
+            
+            <div class="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-12">
+                <!-- Step 1 -->
+                <div class="flex flex-col items-center text-center max-w-xs reveal">
+                    <div class="w-16 h-16 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center text-2xl font-bold mb-4">1</div>
+                    <h3 class="text-xl font-bold mb-2">Join Channel</h3>
+                    <p class="text-slate-400">Join our Telegram channel <a href="https://t.me/Rentlinkedin12" class="text-blue-400 hover:underline">@Rentlinkedin12</a> to see available stock.</p>
+                </div>
+                
+                <div class="hidden md:block w-24 h-0.5 bg-slate-700 reveal"></div>
+                
+                <!-- Step 2 -->
+                <div class="flex flex-col items-center text-center max-w-xs reveal" style="transition-delay: 200ms;">
+                    <div class="w-16 h-16 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center text-2xl font-bold mb-4">2</div>
+                    <h3 class="text-xl font-bold mb-2">Choose Account</h3>
+                    <p class="text-slate-400">Select the type of account you need from our inventory list.</p>
+                </div>
+
+                <div class="hidden md:block w-24 h-0.5 bg-slate-700 reveal"></div>
+
+                <!-- Step 3 -->
+                <div class="flex flex-col items-center text-center max-w-xs reveal" style="transition-delay: 400ms;">
+                    <div class="w-16 h-16 rounded-full bg-blue-600 text-white shadow-lg shadow-blue-600/30 flex items-center justify-center text-2xl font-bold mb-4">3</div>
+                    <h3 class="text-xl font-bold mb-2">Contact Admin</h3>
+                    <p class="text-slate-400">Message <a href="https://t.me/herewedo12" class="text-blue-400 hover:underline">@herewedo12</a> to pay and receive login details instantly.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partner Program -->
+    <section id="partners" class="py-24 bg-gradient-to-br from-green-900/10 to-emerald-900/10 border-y border-white/5 relative">
+        <div class="absolute top-0 right-0 w-1/2 h-full bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-10 pointer-events-none"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2 reveal">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-green-500/10 border border-green-500/20 text-green-400 text-xs font-bold uppercase tracking-wider mb-4">
+                        <i class="fa-solid fa-money-bill-wave"></i> Affiliate Program
+                    </div>
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6">Refer Friends, <span class="text-green-400">Earn Real Cash</span></h2>
+                    <p class="text-slate-300 text-lg mb-8">
+                        Join our high-paying partner program. For every client you refer who rents an account, you get paid instantly via Crypto or PayPal.
+                    </p>
+                    
+                    <div class="space-y-6 mb-8">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-green-500/20 text-green-400 flex items-center justify-center font-bold text-xl">1</div>
+                            <div>
+                                <h4 class="font-bold text-white text-lg">20% Commission</h4>
+                                <p class="text-slate-400">Earn 20% recurring commission on every monthly renewal.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-green-500/20 text-green-400 flex items-center justify-center font-bold text-xl">2</div>
+                            <div>
+                                <h4 class="font-bold text-white text-lg">Instant Payouts</h4>
+                                <p class="text-slate-400">No minimum withdrawal limit. Get paid as soon as your referral pays.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="https://t.me/herewedo12" target="_blank" class="inline-flex items-center justify-center gap-2 bg-green-600 hover:bg-green-500 text-white px-8 py-4 rounded-full font-bold text-lg transition-all shadow-lg shadow-green-600/20">
+                            Start Earning Now <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                         <a href="https://t.me/linkedin_rental_12" target="_blank" class="inline-flex items-center justify-center gap-2 glass-card hover:bg-white/10 text-white px-8 py-4 rounded-full font-bold text-lg transition-all border border-green-500/30">
+                            <i class="fa-brands fa-telegram"></i> Earning Updates
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2 reveal">
+                    <div class="glass-card p-8 rounded-3xl border border-green-500/30 relative overflow-hidden group">
+                        <div class="absolute -right-10 -top-10 w-40 h-40 bg-green-500/20 rounded-full blur-3xl group-hover:bg-green-500/30 transition-all"></div>
+                        
+                        <div class="text-center mb-8">
+                            <p class="text-slate-400 text-sm font-mono mb-2">Estimated Monthly Earnings</p>
+                            <div class="text-5xl font-bold text-white mb-2">$1,250<span class="text-green-400 text-lg">+</span></div>
+                            <p class="text-xs text-slate-500">Based on referring just 5 Pro accounts</p>
+                        </div>
+
+                        <div class="bg-slate-950/50 rounded-xl p-4 border border-white/5 space-y-3">
+                            <div class="flex items-center justify-between text-sm">
+                                <span class="text-slate-400">Referrals this month</span>
+                                <span class="text-white font-mono">12</span>
+                            </div>
+                            <div class="flex items-center justify-between text-sm">
+                                <span class="text-slate-400">Conversion Rate</span>
+                                <span class="text-green-400 font-mono">24%</span>
+                            </div>
+                             <div class="w-full bg-slate-800 rounded-full h-2 mt-2">
+                                <div class="bg-green-500 h-2 rounded-full" style="width: 65%"></div>
+                            </div>
+                            <p class="text-xs text-center text-slate-500 mt-2">Payout ready to claim</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="py-20">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold">Frequently Asked Questions</h2>
+            </div>
+            
+            <div class="space-y-4">
+                <details class="group glass-card rounded-xl p-4 [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 text-white">
+                        <h2 class="text-lg font-medium">Is it safe to rent these accounts?</h2>
+                        <span class="relative size-5 shrink-0">
+                            <i class="fa-solid fa-plus absolute inset-0 opacity-100 group-open:opacity-0 transition-opacity"></i>
+                            <i class="fa-solid fa-minus absolute inset-0 opacity-0 group-open:opacity-100 transition-opacity"></i>
+                        </span>
+                    </summary>
+                    <p class="mt-4 leading-relaxed text-slate-400">
+                        Yes, we prioritize safety. All accounts are created with unique IPs and are phone verified. We provide guidelines on how to use them safely to avoid bans.
+                    </p>
+                </details>
+
+                <details class="group glass-card rounded-xl p-4 [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 text-white">
+                        <h2 class="text-lg font-medium">What happens if an account gets restricted?</h2>
+                        <span class="relative size-5 shrink-0">
+                            <i class="fa-solid fa-plus absolute inset-0 opacity-100 group-open:opacity-0 transition-opacity"></i>
+                            <i class="fa-solid fa-minus absolute inset-0 opacity-0 group-open:opacity-100 transition-opacity"></i>
+                        </span>
+                    </summary>
+                    <p class="mt-4 leading-relaxed text-slate-400">
+                        If an account is restricted due to our fault within the warranty period, we provide a free replacement instantly.
+                    </p>
+                </details>
+
+                <details class="group glass-card rounded-xl p-4 [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 text-white">
+                        <h2 class="text-lg font-medium">Can I change the password?</h2>
+                        <span class="relative size-5 shrink-0">
+                            <i class="fa-solid fa-plus absolute inset-0 opacity-100 group-open:opacity-0 transition-opacity"></i>
+                            <i class="fa-solid fa-minus absolute inset-0 opacity-0 group-open:opacity-100 transition-opacity"></i>
+                        </span>
+                    </summary>
+                    <p class="mt-4 leading-relaxed text-slate-400">
+                        No, changing credentials is not allowed for rental accounts as we need to maintain access for security and recovery purposes. You get full access to use the account features.
+                    </p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 bg-slate-950 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div class="col-span-1 md:col-span-2">
+                    <a href="#" class="flex items-center space-x-2 mb-4">
+                        <i class="fa-brands fa-linkedin text-3xl text-blue-500"></i>
+                        <span class="text-xl font-bold">Rent<span class="text-blue-500">Linked</span></span>
+                    </a>
+                    <p class="text-slate-400 max-w-sm">
+                        The premium destination for high-quality LinkedIn account rentals. Scale your business outreach with confidence.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="font-bold text-white mb-4">Quick Links</h3>
+                    <ul class="space-y-2 text-slate-400">
+                        <li><a href="#home" class="hover:text-blue-400 transition-colors">Home</a></li>
+                        <li><a href="#pricing" class="hover:text-blue-400 transition-colors">Pricing</a></li>
+                        <li><a href="#features" class="hover:text-blue-400 transition-colors">Features</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold text-white mb-4">Contact</h3>
+                    <ul class="space-y-2 text-slate-400">
+                        <li class="flex items-center gap-2"><i class="fa-brands fa-telegram text-blue-400"></i> <a href="https://t.me/herewedo12" class="hover:text-white">Support: @herewedo12</a></li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-users text-blue-400"></i> <a href="https://t.me/Rentlinkedin12" class="hover:text-white">Main Channel</a></li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-fire text-amber-500"></i> <a href="https://t.me/linkedin_rental_12" class="hover:text-white">Offers Channel</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-white/5 pt-8 text-center text-slate-500 text-sm">
+                &copy; 2023 RentLinked. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sticky Mobile CTA -->
+    <div class="fixed bottom-6 right-6 z-50 flex flex-col gap-4">
+        <a href="https://t.me/Rentlinkedin12" target="_blank" class="w-14 h-14 bg-white rounded-full flex items-center justify-center shadow-lg shadow-white/10 hover:scale-110 transition-transform cursor-pointer" title="Join Channel">
+            <i class="fa-solid fa-users text-2xl text-blue-600"></i>
+        </a>
+        <a href="https://t.me/herewedo12" target="_blank" class="floating w-14 h-14 bg-blue-600 rounded-full flex items-center justify-center shadow-lg shadow-blue-600/30 hover:scale-110 transition-transform cursor-pointer" title="Contact Support">
+            <i class="fa-brands fa-telegram text-2xl text-white"></i>
+        </a>
+    </div>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Dynamic Navbar Effect
+        const nav = document.querySelector('nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                nav.classList.add('bg-slate-950/80');
+                nav.classList.remove('border-white/5');
+                nav.classList.add('border-blue-500/20');
+            } else {
+                nav.classList.remove('bg-slate-950/80');
+                nav.classList.add('border-white/5');
+                nav.classList.remove('border-blue-500/20');
+            }
+        });
+
+        // Dynamic Year
+        document.querySelector('.text-slate-500.text-sm').innerHTML = `&copy; ${new Date().getFullYear()} RentLinked. All rights reserved.`;
+
+        // Scroll Reveal Animation
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+        // Trigger once on load
+        reveal();
+
+        // Simulate Live User Counter
+        const userCountElement = document.querySelector('.text-green-400.font-bold');
+        if(userCountElement) {
+            let count = 124;
+            setInterval(() => {
+                if(Math.random() > 0.5) {
+                    count += Math.floor(Math.random() * 3);
+                    userCountElement.textContent = `${count} people`;
+                    userCountElement.parentElement.classList.add('scale-110');
+                    setTimeout(() => userCountElement.parentElement.classList.remove('scale-110'), 200);
+                }
+            }, 5000);
+        }
+    </script>
+</body>
+</html>
